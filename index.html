@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celine's Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="sparkle-layer" aria-hidden="true"></div>
+
+  <main class="page-shell">
+    <section class="profile-hero" aria-labelledby="profile-name">
+      <div class="hero-art" aria-hidden="true">
+        <span class="floating-dot dot-one"></span>
+        <span class="floating-dot dot-two"></span>
+        <span class="floating-dot dot-three"></span>
+      </div>
+
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <svg viewBox="0 0 180 180" role="img" aria-label="Pastel illustrated avatar">
+            <circle cx="90" cy="90" r="86" fill="#ffe1ec" />
+            <circle cx="90" cy="75" r="42" fill="#ffd1e2" />
+            <path d="M34 158c7-32 30-52 56-52s49 20 56 52" fill="#f8a9c5" />
+            <circle cx="74" cy="76" r="5" fill="#8c5065" />
+            <circle cx="106" cy="76" r="5" fill="#8c5065" />
+            <path d="M78 94c8 7 17 7 25 0" fill="none" stroke="#8c5065" stroke-width="5" stroke-linecap="round" />
+            <path
+              d="M52 73c8-35 67-43 83-5 13 31-3 52-3 52-10-16-17-37-17-37-32 18-63 5-63 5s-9 18-7 33c0 0-11-20 7-48z"
+              fill="#b985d6" />
+            <circle cx="58" cy="93" r="9" fill="#ffb8ca" opacity=".8" />
+            <circle cx="122" cy="93" r="9" fill="#ffb8ca" opacity=".8" />
+          </svg>
+        </div>
+        <span class="status-badge">Dreamy mode</span>
+      </div>
+
+      <div class="intro">
+        <p id="greeting" class="greeting">Hello!</p>
+        <h1 id="profile-name">Celine Carson</h1>
+        <p class="tagline">
+          The lakes enigmatic | <br> secret whisperer legit | <br> transaction mesmerizing spell of calm |
+        </p>
+
+        <div class="hero-actions" aria-label="Profile actions">
+          <button class="primary-button" id="likeButton" type="button">
+            Like profile
+            <span id="likeCount">0</span>
+          </button>
+          <a class="ghost-button" href="mailto:hello@example.com">Say hello</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-grid" aria-label="Quick profile details">
+      <article class="stat-card">
+        <span>Hobby</span>
+        <strong>Journaling</strong>
+      </article>
+      <article class="stat-card">
+        <span>Mood</span>
+        <strong>Cozy</strong>
+      </article>
+      <article class="stat-card">
+        <span>Color</span>
+        <strong>Baby pink</strong>
+      </article>
+    </section>
+
+    <section class="content-grid">
+      <article class="profile-panel about-panel">
+        <div class="section-heading">
+          <span class="mini-kicker">About</span>
+          <h2>Soft heart, bright dreams</h2>
+        </div>
+        <p>
+          Mika is a friendly, creative soul who enjoys designing cute things,
+          collecting pretty ideas, and making everyday life feel a little more
+          special. She likes soft colors, handwritten notes, and gentle music.
+        </p>
+      </article>
+
+      <article class="profile-panel">
+        <div class="section-heading">
+          <span class="mini-kicker">Favorites</span>
+          <h2>Little joys</h2>
+        </div>
+        <div class="interest-list">
+          <span>Pastel outfits</span>
+          <span>Milk tea</span>
+          <span>Photo diaries</span>
+          <span>Study cafe days</span>
+          <span>Soft playlists</span>
+          <span>Pretty stickers</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="profile-panel gallery-section" aria-labelledby="gallery-title">
+      <div class="section-heading">
+        <span class="mini-kicker">Gallery</span>
+        <h2 id="gallery-title">Pastel moments</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-card blush">
+          <span>01</span>
+          <p>Sweet desk setup</p>
+        </div>
+        <div class="gallery-card lavender">
+          <span>02</span>
+          <p>Cozy playlist mood</p>
+        </div>
+        <div class="gallery-card peach">
+          <span>03</span>
+          <p>Weekend cafe date</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-strip" aria-label="Social links">
+      <a href="#" aria-label="Instagram profile">IG</a>
+      <a href="#" aria-label="Telegram">TG</a>
+      <a href="https://www.facebook.com/heycelinee" aria-label="Facebook profile">FB</a>
+      <a href="#" aria-label="Email profile">Mail</a>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
