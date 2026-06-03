@@ -314,6 +314,7 @@ h2 {
 }
 
 .gallery-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -322,33 +323,50 @@ h2 {
   overflow: hidden;
   border-radius: 18px;
   color: #7e3e59;
+  background-image: var(--pastel-overlay), var(--card-image);
+  background-position: center;
+  background-size: cover;
+  isolation: isolate;
+}
+
+.gallery-card::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 247, 251, 0.5));
 }
 
 .gallery-card span {
+  position: relative;
   width: fit-content;
   padding: 7px 12px;
   border-radius: 999px;
   color: #8d4c67;
   font-weight: 800;
-  background: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 8px 18px rgba(126, 62, 89, 0.1);
 }
 
 .gallery-card p {
+  position: relative;
   margin-bottom: 0;
   font-size: 1.2rem;
   font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 2px 14px rgba(126, 62, 89, 0.52);
 }
 
 .blush {
-  background: linear-gradient(145deg, #ffd5e6, #fff3f8);
+  --pastel-overlay: linear-gradient(145deg, rgba(255, 213, 230, 0.74), rgba(255, 243, 248, 0.42));
 }
 
 .lavender {
-  background: linear-gradient(145deg, #d8c4ff, #fff3f8);
+  --pastel-overlay: linear-gradient(145deg, rgba(216, 196, 255, 0.72), rgba(255, 243, 248, 0.4));
 }
 
 .peach {
-  background: linear-gradient(145deg, #ffd5bf, #fff3f8);
+  --pastel-overlay: linear-gradient(145deg, rgba(255, 213, 191, 0.74), rgba(255, 243, 248, 0.42));
 }
 
 .contact-strip {
