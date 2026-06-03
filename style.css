@@ -186,6 +186,15 @@ h2 {
   line-height: 1.7;
 }
 
+.tagline {
+  max-width: 54ch;
+  color: #7f3d59;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.35rem, 2.6vw, 1.8rem);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
