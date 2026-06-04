@@ -112,6 +112,36 @@
       </div>
     </section>
 
+    <section class="profile-panel vouches-section" aria-labelledby="vouches-title">
+      <div class="section-heading">
+        <span class="mini-kicker">Vouches</span>
+        <h2 id="vouches-title">Sweet words</h2>
+      </div>
+
+      <form class="vouch-form" id="vouchForm">
+        <div class="field-row">
+          <label for="vouchName">Name</label>
+          <input id="vouchName" name="name" type="text" maxlength="60" placeholder="Your name" autocomplete="name"
+            required>
+        </div>
+
+        <div class="field-row">
+          <label for="vouchComment">Comment</label>
+          <textarea id="vouchComment" name="comment" maxlength="500" rows="4" placeholder="Leave a kind vouch"
+            required></textarea>
+        </div>
+
+        <div class="vouch-actions">
+          <button class="primary-button" id="vouchSubmit" type="submit">Send vouch</button>
+          <p class="form-status" id="vouchStatus" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+
+      <div class="vouch-list" id="vouchList" aria-live="polite"></div>
+
+      <button class="ghost-button load-more-button" id="loadMoreVouches" type="button" hidden>Load more</button>
+    </section>
+
     <section class="contact-strip" aria-label="Social links">
       <a href="https://www.instagram.com/_marywhoo?igsh=czJ3MzE0Mmo0ZXRy" aria-label="Instagram profile">IG</a>
       <a href="http://t.me/heycelinee" aria-label="Telegram">TG</a>
