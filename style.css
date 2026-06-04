@@ -441,10 +441,32 @@ h2 {
 }
 
 .vouch-card {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 14px;
+  align-items: start;
   padding: 18px;
   border: 1px solid rgba(196, 93, 132, 0.12);
   border-radius: 18px;
   background: rgba(255, 247, 251, 0.8);
+}
+
+.vouch-avatar {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #f184ad, #c98df0);
+  box-shadow: 0 10px 22px rgba(196, 93, 132, 0.2);
+}
+
+.vouch-card-body {
+  min-width: 0;
 }
 
 .vouch-card-header {
@@ -626,5 +648,16 @@ h2 {
 
   .contact-strip a {
     flex: 1 1 42%;
+  }
+
+  .vouch-card {
+    grid-template-columns: 40px 1fr;
+    gap: 12px;
+  }
+
+  .vouch-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
   }
 }

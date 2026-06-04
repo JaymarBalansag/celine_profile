@@ -12,11 +12,13 @@ const loadMoreVouches = document.querySelector("#loadMoreVouches");
 
 const VOUCHES_API_URL = "https://script.google.com/macros/s/AKfycbzpHm4AZizt7Sh3dNKGuFdyhqT4u0Cf3VCe_tc3Z5N3EX_QFMVPuVZrRZdSJwio0JIl/exec";
 const VOUCH_LIMIT = 5;
+const LOAD_MORE_DELAY_MS = 1200;
 const VOUCH_COOLDOWN_MS = 60 * 60 * 1000;
 const VOUCH_COOLDOWN_KEY = "celineProfileLastVouchAt";
 let likes = 0;
 let vouchOffset = 0;
 let isLoadingVouches = false;
+let canLoadMoreVouches = true;
 
 function setGreeting() {
   const hour = new Date().getHours();
@@ -96,20 +98,28 @@ function formatDate(value) {
 
 function createVouchCard(vouch) {
   const card = document.createElement("article");
+  const avatar = document.createElement("span");
+  const body = document.createElement("div");
   const header = document.createElement("div");
   const name = document.createElement("strong");
   const time = document.createElement("time");
   const comment = document.createElement("p");
+  const displayName = vouch.name || "Anonymous";
 
   card.className = "vouch-card";
+  avatar.className = "vouch-avatar";
+  body.className = "vouch-card-body";
   header.className = "vouch-card-header";
-  name.textContent = vouch.name || "Anonymous";
+  avatar.textContent = displayName.trim().charAt(0).toUpperCase() || "A";
+  avatar.setAttribute("aria-hidden", "true");
+  name.textContent = displayName;
   time.dateTime = vouch.created_at || "";
   time.textContent = formatDate(vouch.created_at);
   comment.textContent = vouch.comment || "";
 
   header.append(name, time);
-  card.append(header, comment);
+  body.append(header, comment);
+  card.append(avatar, body);
 
   return card;
 }
@@ -122,7 +132,7 @@ function renderEmptyVouches() {
 }
 
 async function loadVouches(reset = false) {
-  if (isLoadingVouches) {
+  if (isLoadingVouches || (!reset && !canLoadMoreVouches)) {
     return;
   }
 
@@ -133,7 +143,9 @@ async function loadVouches(reset = false) {
   }
 
   isLoadingVouches = true;
+  canLoadMoreVouches = false;
   loadMoreVouches.disabled = true;
+  loadMoreVouches.textContent = reset ? "Loading vouches..." : "Loading...";
 
   if (reset) {
     vouchOffset = 0;
@@ -172,7 +184,12 @@ async function loadVouches(reset = false) {
     setVouchStatus(error.message, true);
   } finally {
     isLoadingVouches = false;
-    loadMoreVouches.disabled = false;
+    loadMoreVouches.textContent = "Load more";
+
+    window.setTimeout(() => {
+      canLoadMoreVouches = true;
+      loadMoreVouches.disabled = false;
+    }, LOAD_MORE_DELAY_MS);
   }
 }
 
