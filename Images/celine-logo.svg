@@ -1,0 +1,35 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(144 104) rotate(51.8) scale(462)">
+      <stop stop-color="#FFF7FB"/>
+      <stop offset="0.5" stop-color="#FFD5E6"/>
+      <stop offset="1" stop-color="#D8C4FF"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="88" y1="78" x2="424" y2="442" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.43" stop-color="#F184AD"/>
+      <stop offset="1" stop-color="#C98DF0"/>
+    </linearGradient>
+    <linearGradient id="letter" x1="152" y1="140" x2="358" y2="368" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B4260"/>
+      <stop offset="1" stop-color="#C45D84"/>
+    </linearGradient>
+    <filter id="softShadow" x="40" y="44" width="432" height="436" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="20"/>
+      <feGaussianBlur stdDeviation="24"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.768627 0 0 0 0 0.364706 0 0 0 0 0.517647 0 0 0 0.22 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_2"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_2" result="shape"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="148" fill="url(#bg)"/>
+  <g filter="url(#softShadow)">
+    <circle cx="256" cy="250" r="164" fill="rgba(255,255,255,0.62)"/>
+    <circle cx="256" cy="250" r="164" stroke="url(#ring)" stroke-width="18"/>
+  </g>
+  <path d="M323.5 157C284 127 217.5 128.5 179 173.5C138.5 221 142.5 294.5 184 335.5C226 377 296 373.5 333.5 334.5C347 320.5 348 299 334.5 287C321 275 301 278 288 291.5C267.5 313 230.5 311.5 209.5 289.5C188.5 267.5 188.5 227.5 210.5 204.5C232.5 181.5 270 180.5 291 199.5C305 212 326 210 337.5 196C349 182 338.5 168.5 323.5 157Z" fill="url(#letter)"/>
+  <path d="M356.5 140.5C360.5 128 378.2 128 382.2 140.5L385.8 151.7C387.1 155.8 390.4 159 394.5 160.3L405.6 163.8C418.2 167.8 418.2 185.6 405.6 189.6L394.5 193.1C390.4 194.4 387.1 197.7 385.8 201.8L382.2 213C378.2 225.5 360.5 225.5 356.5 213L352.9 201.8C351.6 197.7 348.4 194.4 344.3 193.1L333.1 189.6C320.6 185.6 320.6 167.8 333.1 163.8L344.3 160.3C348.4 159 351.6 155.8 352.9 151.7L356.5 140.5Z" fill="#FFF3C9"/>
+  <path d="M154.5 324.8C157.3 316 169.7 316 172.5 324.8L175.1 332.9C176 335.8 178.3 338.1 181.2 339L189.2 341.5C198 344.3 198 356.7 189.2 359.5L181.2 362C178.3 362.9 176 365.2 175.1 368.1L172.5 376.2C169.7 385 157.3 385 154.5 376.2L151.9 368.1C151 365.2 148.7 362.9 145.8 362L137.8 359.5C129 356.7 129 344.3 137.8 341.5L145.8 339C148.7 338.1 151 335.8 151.9 332.9L154.5 324.8Z" fill="#C9F1DF"/>
+</svg>

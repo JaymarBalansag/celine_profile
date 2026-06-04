@@ -147,6 +147,15 @@ a {
   z-index: 1;
 }
 
+.profile-logo {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 18px;
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(196, 93, 132, 0.18);
+}
+
 .greeting,
 .mini-kicker {
   margin: 0 0 10px;
@@ -613,6 +622,10 @@ h2 {
   }
 
   .tagline {
+    margin-inline: auto;
+  }
+
+  .profile-logo {
     margin-inline: auto;
   }
 
